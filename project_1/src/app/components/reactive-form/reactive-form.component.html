@@ -1,0 +1,10 @@
+<!-- <p>reactive-form works!</p> -->
+
+<form [formGroup]="loginForm" (ngSubmit)="loginCheck()">
+    <input type="text" placeholder="Enter your name"  formControlName="user"><br>
+    <span *ngIf="loginForm.controls.user.touched && loginForm.controls.user.invalid">Invalid input</span><br>
+    <input type="password" placeholder="Enter your password" formControlName="password"><br>
+    <span *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid">Invalid input</span><br>
+
+<button>Submit</button>
+</form>
